@@ -4,12 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ETD Croatia</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <style>
   :root { --bg:#0f172a; --fg:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; }
   * { box-sizing:border-box; margin:0; }
   body { min-height:100vh; display:grid; place-items:center; padding:24px 16px;
          background:radial-gradient(circle at 30% 20%, #1e293b, var(--bg) 70%);
          color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; text-align:center; }
+  .logo { width:min(220px,60vw); height:auto; border-radius:20px; margin-bottom:24px; box-shadow:0 10px 40px rgba(0,0,0,.4); }
   h1 { font-size:clamp(2.2rem,8vw,4rem); letter-spacing:-0.02em; }
   .bar { width:64px; height:4px; background:var(--accent); border-radius:2px; margin:20px auto; }
   p { color:var(--muted); font-size:1.1rem; line-height:1.6; }
@@ -21,6 +23,7 @@
 </head>
 <body>
   <main>
+    <img class="logo" src="assets/logo.jpg" alt="ETD logo">
     <h1>ETD Croatia</h1>
     <div class="bar"></div>
     <p>Uskoro. · Coming soon.</p>
