@@ -4,32 +4,168 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exoplanet Research Group Croatia</title>
+<meta name="description" content="Opažanja tranzita egzoplaneta, analiza i modeliranje podataka te edukacija.">
+<meta name="theme-color" content="#0C0A18">
+<link rel="canonical" href="https://exoplanetresearchgroup-croatia.github.io/">
+<link rel="alternate" hreflang="hr" href="https://exoplanetresearchgroup-croatia.github.io/">
+<link rel="alternate" hreflang="en" href="https://exoplanetresearchgroup-croatia.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://exoplanetresearchgroup-croatia.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Exoplanet Research Group Croatia">
+<meta property="og:title" content="Exoplanet Research Group Croatia">
+<meta property="og:description" content="Opažanja tranzita egzoplaneta, analiza i modeliranje podataka te edukacija.">
+<meta property="og:url" content="https://exoplanetresearchgroup-croatia.github.io/">
+<meta property="og:image" content="https://exoplanetresearchgroup-croatia.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Topla zvijezda na tamnom nebu i natpis Exoplanet Research Group Croatia">
+<meta property="og:locale" content="hr_HR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="assets/favicon.png">
-<style>
-  :root { --bg:#0f172a; --fg:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; }
-  * { box-sizing:border-box; margin:0; }
-  body { min-height:100vh; display:grid; place-items:center; padding:24px 16px;
-         background:radial-gradient(circle at 30% 20%, #1e293b, var(--bg) 70%);
-         color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; text-align:center; }
-  .logo { width:min(220px,60vw); height:auto; border-radius:20px; margin-bottom:24px; box-shadow:0 10px 40px rgba(0,0,0,.4); }
-  h1 { font-size:clamp(2rem,7vw,3.5rem); letter-spacing:-0.02em; text-wrap:balance; }
-  .bar { width:64px; height:4px; background:var(--accent); border-radius:2px; margin:20px auto; }
-  p { color:var(--muted); font-size:1.1rem; line-height:1.6; }
-  a.link { display:inline-block; margin-top:28px; padding:10px 20px; border:1px solid var(--accent); border-radius:8px;
-           color:var(--accent); text-decoration:none; font-weight:500; }
-  a.link:hover { background:var(--accent); color:var(--bg); }
-  footer { margin-top:40px; font-size:.85rem; color:var(--muted); }
-</style>
+<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/js/site.js" defer></script>
 </head>
 <body>
-  <main>
-    <img class="logo" src="assets/logo.jpg" alt="ETD logo">
-    <h1>Exoplanet Research Group Croatia</h1>
-    <div class="bar"></div>
-    <p>Uskoro. · Coming soon.</p>
-    <a class="link" href="https://var.astro.cz/en/Exoplanets" target="_blank" rel="noopener">Exoplanet Transit Database &rarr;</a>
-    <footer>&copy; <span id="y">2026</span> Exoplanet Research Group Croatia</footer>
-  </main>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<a class="skip-link" href="#sadrzaj">Preskoči na sadržaj</a>
+<header class="site-header">
+  <a class="brand" href="./" aria-label="Exoplanet Research Group Croatia, početna"><img src="assets/logo.jpg" alt="" width="32" height="32"><span>Exoplanet Research Group Croatia</span></a>
+  <nav id="site-nav" class="site-nav" aria-label="Glavna navigacija">
+    <ul>
+      <li><a href="#o-grupi">O grupi</a></li>
+      <li><a href="#sto-radimo">Što radimo</a></li>
+      <li><a href="#ukljuci-se">Uključi se</a></li>
+      <li><a href="#servisi">Servisi</a></li>
+      <li><a href="#baza-znanja">Baza znanja</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="lang" role="group" aria-label="Jezik"><a href="./" lang="hr" aria-label="Hrvatski" aria-current="page">HR</a><span aria-hidden="true">/</span><a href="en/" lang="en" hreflang="en" aria-label="English">EN</a></div>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-label-open="Izbornik" data-label-close="Zatvori">Izbornik</button>
+</header>
+<main id="sadrzaj">
+  <div class="stage">
+    <div class="sky">
+      <div class="sky-field" aria-hidden="true">
+        <div class="orbit"><div class="corona"></div><div class="star"></div><div class="planet"></div></div>
+      </div>
+      <div class="hero-copy">
+        <h1>Exoplanet Research Group Croatia</h1>
+        <p class="ph">PH-01: opis grupe u jednoj rečenici</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#sto-radimo">Što radimo</a>
+          <a class="btn btn-ghost" href="#ukljuci-se">Kako se uključiti</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section col" id="o-grupi">
+    <h2>O grupi i članovima</h2>
+    <p class="ph ph-block">PH-02: kratki opis grupe (2–4 rečenice)</p>
+    <div class="group">
+      <h3>Povijest</h3>
+      <p class="ph ph-block">PH-03: kada i gdje je grupa nastala i kako se razvila</p>
+    </div>
+    <div class="group">
+      <h3>Cilj</h3>
+      <p class="ph ph-block">PH-04: cilj ili misija grupe</p>
+    </div>
+    <div class="group">
+      <h3>Članovi</h3>
+      <p class="ph ph-block">PH-05: popis članova (ime i prezime, uloga u grupi, ustanova, poveznica)</p>
+    </div>
+  </section>
+
+  <section class="section col" id="sto-radimo">
+    <h2>Što radimo</h2>
+    <ul class="items">
+      <li>
+        <h3>Opažanja tranzita</h3>
+        <p class="ph ph-block">PH-06: što i kako opažate: mete, oprema, mjesto, od kada</p>
+      </li>
+      <li>
+        <h3>Analiza i modeliranje</h3>
+        <p class="ph ph-block">PH-07: kako obrađujete podatke, metode i softver, što se radi s rezultatima</p>
+      </li>
+      <li>
+        <h3>Edukacija i outreach</h3>
+        <p class="ph ph-block">PH-08: aktivnosti: radionice, predavanja, rad sa studentima ili školama</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section col" id="ukljuci-se">
+    <h2>Kako se uključiti</h2>
+    <div class="group">
+      <h3>Tko se može uključiti</h3>
+      <p class="ph ph-block">PH-09: tko se može uključiti i postoje li uvjeti</p>
+    </div>
+    <div class="group">
+      <h3>Što je potrebno</h3>
+      <p class="ph ph-block">PH-10: oprema, predznanje, vrijeme</p>
+    </div>
+    <div class="group">
+      <h3>Prvi korak</h3>
+      <p class="ph ph-block">PH-11: kome se javiti i kako, što slijedi nakon toga</p>
+    </div>
+    <p class="after"><a class="btn btn-ghost" href="#kontakt">Javi se</a></p>
+  </section>
+
+  <section class="section col" id="servisi">
+    <h2>Servisi i korisne poveznice</h2>
+    <ul class="link-list">
+      <li>
+        <a href="https://var.astro.cz/en/Exoplanets" target="_blank" rel="noopener">Exoplanet Transit Database<span class="visually-hidden"> (otvara se u novoj kartici)</span></a>
+        <p>Baza svjetlosnih krivulja tranzita s predviđanjima budućih tranzita. Vodi je Sekcija za promjenjive zvijezde i egzoplanete Češkog astronomskog društva.</p>
+      </li>
+      <li>
+        <a href="https://www.exoclock.space/" target="_blank" rel="noopener">ExoClock<span class="visually-hidden"> (otvara se u novoj kartici)</span></a>
+        <p>Projekt u kojem profesionalni i amaterski opažači održavaju točna vremena tranzita planeta koje će promatrati svemirska misija Ariel.</p>
+      </li>
+      <li>
+        <a href="https://exoplanetarchive.ipac.caltech.edu/" target="_blank" rel="noopener">NASA Exoplanet Archive<span class="visually-hidden"> (otvara se u novoj kartici)</span></a>
+        <p>Katalog potvrđenih egzoplaneta s njihovim parametrima i podacima misija poput Keplera i TESS-a.</p>
+      </li>
+    </ul>
+    <div class="group">
+      <h3>Naši alati</h3>
+      <p class="ph ph-block">PH-12: vlastiti alati i servisi grupe (naziv, poveznica, opis u 1–2 rečenice)</p>
+    </div>
+  </section>
+
+  <section class="section col" id="baza-znanja">
+    <h2>Baza znanja</h2>
+    <p>Vodiči za one koji žele razumjeti tranzite i sami ih opažati. Tekstovi su nacrti i grupa ih još provjerava.</p>
+    <ul class="link-list after">
+      <li>
+        <a href="baza-znanja/osnove.html">Osnove egzoplaneta</a>
+        <p>Što su egzoplaneti, kako se otkrivaju i što se iz tranzita može saznati.</p>
+      </li>
+      <li>
+        <a href="baza-znanja/opazanje.html">Vodič za opažanje</a>
+        <p>Kako odabrati metu, pripremiti opremu i snimiti tranzit.</p>
+      </li>
+      <li>
+        <a href="baza-znanja/obrada-podataka.html">Obrada podataka</a>
+        <p>Od snimaka do svjetlosne krivulje i vremena tranzita.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section col" id="kontakt">
+    <h2>Kontakt</h2>
+    <dl class="contact">
+      <dt>E-mail</dt>
+      <dd><span class="ph">PH-16: e-mail adresa grupe</span></dd>
+      <dt>Društvene mreže</dt>
+      <dd><span class="ph">PH-17: poveznice na profile grupe (po želji)</span></dd>
+    </dl>
+  </section>
+</main>
+<footer class="site-footer">&copy; <span data-year>2026</span> Exoplanet Research Group Croatia</footer>
 </body>
 </html>

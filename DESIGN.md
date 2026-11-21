@@ -23,12 +23,24 @@ typography:
     fontWeight: 300
     lineHeight: 1.02
     letterSpacing: "-0.02em"
+  title:
+    fontFamily: "Newsreader, Georgia, serif"
+    fontSize: "clamp(2.4rem, 5vw, 3.8rem)"
+    fontWeight: 400
+    lineHeight: 1.08
+    letterSpacing: "-0.015em"
   heading-2:
     fontFamily: "Newsreader, Georgia, serif"
     fontSize: "clamp(2rem, 4vw, 3rem)"
     fontWeight: 400
     lineHeight: 1.1
     letterSpacing: "-0.01em"
+  heading-article:
+    fontFamily: "Newsreader, Georgia, serif"
+    fontSize: "1.75rem"
+    fontWeight: 500
+    lineHeight: 1.2
+    letterSpacing: "-0.005em"
   heading-3:
     fontFamily: "Newsreader, Georgia, serif"
     fontSize: "1.45rem"
@@ -148,8 +160,10 @@ Ugođaj: miran, topao, atmosferski. Ne sci-fi, ne neon, ne "tech startup".
 ### Hierarchy
 | Uloga | Font | Veličina | Težina | Prored |
 |---|---|---|---|---|
-| Display (h1) | Newsreader, opsz 72 | clamp(2.6rem, 6.4vw, 5.6rem) | 300 | 1.02 |
-| h2 | Newsreader | clamp(2rem, 4vw, 3rem) | 400 | 1.1 |
+| Display (h1 početne) | Newsreader, opsz 72 | clamp(2.6rem, 6.4vw, 5.6rem) | 300 | 1.02 |
+| Title (h1 vodiča) | Newsreader | clamp(2.4rem, 5vw, 3.8rem) | 400 | 1.08 |
+| h2 (sekcije početne) | Newsreader | clamp(2rem, 4vw, 3rem) | 400 | 1.1 |
+| h2 u vodiču | Newsreader | 1.75rem | 500 | 1.2 |
 | h3 | Newsreader | 1.45rem | 500 | 1.25 |
 | Tekst | Source Sans 3 | 1.125rem | 400 | 1.7 |
 | Sitno | Source Sans 3 | 0.9rem | 400 | 1.5 |
@@ -186,6 +200,7 @@ Nema sjena ispod blokova i nema gradijentnih pozadina sekcija.
 - Navigacija: `rounded.panel` (14px).
 - Zvijezda i planet: krugovi. Planet je `ink` s tankim rubom `starglow` na 25 %.
 - Placeholderi imaju isprekidan rub (`1px dashed lavender`) i uvijek nose oznaku, npr. "PH-01: …".
+  Kratki (jedan redak) su `rounded.pill`, a blok-placeholderi za odlomke i popise `rounded.panel`.
 
 ## Components
 
@@ -203,17 +218,26 @@ Nema sjena ispod blokova i nema gradijentnih pozadina sekcija.
 
 ### Tranzit (potpisna komponenta)
 Jedini "veliki" pokret na stranici.
-- **Pojava pri učitavanju:** zvijezda i korona se pojavljuju i lagano povećaju (`opacity 0→1`,
-  `scale .92→1`), trajanje 2,4 s (korona 3 s), easing `cubic-bezier(.2,.7,.2,1)`.
+- **Pojava pri učitavanju:** zvijezda, korona i planet se pojačaju i lagano povećaju iz već vidljivog
+  stanja (`opacity .25→1`, `scale .96→1`), trajanje 2,4 s, eksponencijalni ease-out
+  `cubic-bezier(.16,1,.3,1)` (token `--ease-out`).
+- **Smještaj:** zvijezda ima svoj red u mreži uvoda iznad naslova i veličinu
+  `min(40vmin, 380px, 78 % visine tog reda)`, pa nikad ne dolazi pod naslov, ni na niskim ekranima.
 - **Disanje:** zvijezda se sporo širi i skuplja (`scale 1→1.025`), 8 s, `ease-in-out`, beskonačno.
 - **Prolaz vezan uz skrolanje:** dok posjetitelj skrola kroz pozornicu, planet prelazi slijeva nadesno
-  (raspon `min(130vmin, 1200px)`). Kad je planet ispred zvijezde, njezin sjaj padne najviše 12 %, a korona
+  (raspon `min(110vmin, 1100px)`, tako da je planet na mobitelu i na početku vidljiv). Kad je planet ispred zvijezde, njezin sjaj padne najviše 12 %, a korona
   oslabi. Izračun ide kroz `requestAnimationFrame`, a skrolanje sluša pasivni listener.
 - **Smanjeno kretanje (`prefers-reduced-motion: reduce`):** nema animacija ni zakvačene pozornice.
   Planet stoji statično pokraj zvijezde.
 
 ### Ostali prijelazi
 - Hover i fokus: 0,2–0,25 s, samo boja i rub. Sekcije se ne animiraju pri skrolanju.
+- Izbornik na mobitelu: sloj se pojavljuje kroz `opacity` i `clip-path` krug koji se širi iz gumba
+  (0,45 s, `--ease-out`). Uz smanjeno kretanje se pojavljuje bez prijelaza.
+
+### Površine preglednika
+- Označeni tekst: podloga `halo`, tekst `ink`. Kursor (`caret-color`): `starglow`.
+- Scrollbar: `line` na `ink`. Podcrtavanje poveznica: odmak 0,2em, debljina 1px.
 
 ## Do's and Don'ts
 

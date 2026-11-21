@@ -1,0 +1,7 @@
+# GitHub Pages: keep internal project documents out of the published site.
+exclude:
+  - PRODUCT.md
+  - DESIGN.md
+  - SADRZAJ.md
+  - STRUKTURA.md
+  - .impeccable
