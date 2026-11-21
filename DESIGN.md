@@ -4,7 +4,6 @@ description: "Duboko nebo: tamna, mirna stranica s jednom toplom zvijezdom i tra
 colors:
   ink: "#0C0A18"
   deep: "#17132A"
-  deep-raised: "#211B3A"
   line: "#2C2548"
   moonlight: "#F3EEF8"
   moonlight-soft: "#E2DCEC"
@@ -16,6 +15,16 @@ colors:
   star-core: "#FFF6E8"
   star-warm: "#FFE2B8"
   star-limb: "#F7B877"
+  glass: "rgb(23 19 42 / 0.85)"
+  glass-edge: "rgb(169 159 198 / 0.15)"
+  ghost-edge: "rgb(243 238 248 / 0.3)"
+  ghost-fill: "rgb(12 10 24 / 0.4)"
+  ph-fill: "rgb(12 10 24 / 0.5)"
+  corona-warm: "rgb(255 217 168 / 0.16)"
+  corona-halo: "rgb(168 152 255 / 0.1)"
+  planet-rim: "rgb(255 217 168 / 0.25)"
+  limb-fade: "rgb(247 184 119 / 0.35)"
+  draft-edge: "rgb(255 217 168 / 0.35)"
 typography:
   display:
     fontFamily: "Newsreader, Georgia, serif"
@@ -65,9 +74,22 @@ typography:
     fontWeight: 600
     lineHeight: 1.2
     letterSpacing: "0em"
+  nav:
+    fontFamily: "'Source Sans 3', system-ui, sans-serif"
+    fontSize: "0.95rem"
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: "0em"
+  menu:
+    fontFamily: "Newsreader, Georgia, serif"
+    fontSize: "2rem"
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: "0em"
 rounded:
   pill: "999px"
   panel: "14px"
+  focus: "4px"
   circle: "50%"
 spacing:
   xs: "4px"
@@ -98,11 +120,11 @@ components:
     typography: "{typography.small}"
     rounded: "{rounded.pill}"
     padding: "6px 16px"
-  nav:
-    backgroundColor: "{colors.deep}"
+  site-header:
+    backgroundColor: "{colors.glass}"
     textColor: "{colors.lavender}"
     rounded: "{rounded.panel}"
-    padding: "10px 16px"
+    padding: "8px 16px"
 ---
 
 # Design System: Exoplanet Research Group Croatia
@@ -126,8 +148,8 @@ Ugođaj: miran, topao, atmosferski. Ne sci-fi, ne neon, ne "tech startup".
 ## Colors
 
 ### Primary
-- **starglow `#FFD9A8`**: toplo svjetlo zvijezde. Glavni gumb i aktivni jezik. Koristi se štedljivo:
-  najviše jedan element s ovom bojom po ekranu.
+- **starglow `#FFD9A8`**: toplo svjetlo zvijezde. Samo primarni gumb. Najviše jedan element s ovom
+  bojom po ekranu (zato aktivni jezik i hover u izborniku nisu u `starglow`).
 
 ### Secondary
 - **halo `#A898FF`**: lavandin halo. Poveznice u tekstu i fokus prsten (`:focus-visible`).
@@ -135,7 +157,6 @@ Ugođaj: miran, topao, atmosferski. Ne sci-fi, ne neon, ne "tech startup".
 ### Neutral
 - **ink `#0C0A18`**: pozadina stranice (svemirska tinta).
 - **deep `#17132A`**: podloge (navigacija, istaknuti blokovi).
-- **deep-raised `#211B3A`**: podloga iznad `deep`.
 - **line `#2C2548`**: tanke linije i rubovi.
 - **moonlight `#F3EEF8`**: naslovi i glavni tekst.
 - **moonlight-soft `#E2DCEC`**: dugi tekst (odlomci u Bazi znanja).
@@ -144,6 +165,12 @@ Ugođaj: miran, topao, atmosferski. Ne sci-fi, ne neon, ne "tech startup".
 ### Zvijezda (samo za ilustraciju)
 - **star-core `#FFF6E8` → star-warm `#FFE2B8` → star-limb `#F7B877`**: radijalni gradijent zvijezde,
   rub prelazi u prozirnu toplu boju i zatim u `ink`. Te boje se ne koriste za tekst ni sučelje.
+
+### Prozirne boje (alfa tokeni)
+Sve prozirne boje su imenovani tokeni u `rgb(r g b / a)` obliku, bez `color-mix()`, kako bi radile i u
+starijim preglednicima: `glass` (deep 85 %), `glass-edge` (lavender 15 %), `ghost-edge` (moonlight 30 %),
+`ghost-fill` (ink 40 %), `ph-fill` (ink 50 %), `corona-warm` (starglow 16 %), `corona-halo` (halo 10 %),
+`planet-rim` (starglow 25 %), `limb-fade` (star-limb 35 %), `draft-edge` (starglow 35 %).
 
 ### Named Rules
 - **Kontrast:** `moonlight` na `ink` 17,2:1, `lavender` na `ink` 7,9:1, `lavender` na `deep` 7,3:1,
@@ -154,8 +181,9 @@ Ugođaj: miran, topao, atmosferski. Ne sci-fi, ne neon, ne "tech startup".
 
 - **Newsreader** (serif, os optičke veličine `opsz` 6–72): naslovi. Display koristi `opsz` 72 i težinu 300.
 - **Source Sans 3**: sav ostali tekst, gumbi i navigacija.
-- Obje obitelji imaju latin-ext podskup (č, ć, đ, š, ž).
-- Učitavaju se samo korištene težine: Newsreader 300–600, Source Sans 3 400 i 600.
+- Fontovi se poslužuju lokalno, osi težine sužene na korišteno: Newsreader 300–600 (+ `opsz` 6–72),
+  Source Sans 3 400–600. Po obitelji tri datoteke: `latin`, mali `hr` podskup (Č č Ć ć Đ đ Š š Ž ž)
+  i `latin-ext` za ostala proširena slova, svaka sa svojim `unicode-range`.
 
 ### Hierarchy
 | Uloga | Font | Veličina | Težina | Prored |
@@ -168,6 +196,8 @@ Ugođaj: miran, topao, atmosferski. Ne sci-fi, ne neon, ne "tech startup".
 | Tekst | Source Sans 3 | 1.125rem | 400 | 1.7 |
 | Sitno | Source Sans 3 | 0.9rem | 400 | 1.5 |
 | Gumb | Source Sans 3 | 1rem | 600 | 1.2 |
+| Navigacija | Source Sans 3 | 0.95rem | 400 | 1.4 |
+| Izbornik (mobitel) | Newsreader | 2rem | 400 | 1.2 |
 
 ### Named Rules
 - Duljina retka teksta najviše 68ch.
@@ -176,21 +206,24 @@ Ugođaj: miran, topao, atmosferski. Ne sci-fi, ne neon, ne "tech startup".
 
 ## Layout
 
-- **Uvod (hero):** pozornica visine 220vh. Unutra je "nebo" visine 100vh zakvačeno (`position: sticky`)
-  dok planet prelazi preko zvijezde. Zvijezda je u gornjem dijelu (središte na 31 % visine), a naslov,
-  placeholder PH-01 i gumbi stoje centrirano u donjem dijelu.
+- **Uvod (hero):** pozornica visine 160vh (150vh na mobitelu), samo kad radi JavaScript. Unutra je
+  "nebo" najmanje 100svh visoko (raste sa sadržajem pri povećanom tekstu) i zakvačeno
+  (`position: sticky`) dok planet prelazi preko zvijezde. Zvijezda je u gornjem redu mreže, a naslov,
+  placeholder PH-01 i gumbi stoje centrirano u donjem redu. Na niskim ekranima (`max-height: 40em`)
+  i bez JavaScripta pozornica se ne kvači.
 - **Sadržaj:** jedan centrirani stupac, `width: min(68ch, 100% - 32px)`. Sekcije su odvojene razmakom
   `spacing.section`, bez kartica.
 - **Navigacija:** plutajuća traka pri vrhu, najviše 1180px široka.
-- **Mobitel (prijelom 860px):** bočni razmak 16px, bez vodoravnog skrolanja. U navigaciji ostaju logo
-  i preklopnik jezika. Obrazac za ostale poveznice na mobitelu određuje se u koraku 3 (struktura).
+- **Mobitel i tablet (prijelom 1000px):** bočni razmak 16px, bez vodoravnog skrolanja. U traci ostaju
+  logo, preklopnik jezika i gumb "Izbornik"; izbornik se otvara preko cijelog ekrana i skrola se ako ne
+  stane. Ciljevi dodira najmanje 44px visine.
 
 ## Elevation & Depth
 
 Dubinu daje svjetlo, ne sjene:
 - korona zvijezde (širok, vrlo blag radijalni sjaj: `starglow` na 16 % i `halo` na 10 % prozirnosti);
-- naslov u uvodu ima `text-shadow: 0 2px 40px rgba(12,10,24,.55)`;
-- navigacija: `deep` na 55 % prozirnosti, `backdrop-filter: blur(14px)`, rub `lavender` na 15 %.
+- navigacija: `glass` (deep na 85 %), `backdrop-filter: blur(14px)`, rub `glass-edge`. 85 % je
+  potrebno da tekst navigacije zadrži 4,5:1 i kad je ispod nje svjetla zvijezda.
 
 Nema sjena ispod blokova i nema gradijentnih pozadina sekcija.
 
@@ -206,12 +239,21 @@ Nema sjena ispod blokova i nema gradijentnih pozadina sekcija.
 
 ### Buttons
 - **Primarni:** `starglow` podloga, `on-starglow` tekst. Hover `starglow-hover`, prijelaz 0,25 s.
-- **Sekundarni (ghost):** rub `moonlight` na 30 %, podloga `ink` na 40 %. Hover: rub `moonlight`.
+  Jedan po ekranu: "Što radimo" u uvodu, "Javi se" na kraju sekcije "Kako se uključiti".
+- **Sekundarni (ghost):** rub `ghost-edge`, podloga `ghost-fill`. Hover: rub `moonlight`.
 - Natpis kaže što se događa ("Što radimo", "Kako se uključiti"), bez strelica.
+
+### Poveznice
+- U tekstu: `halo`, podcrtano. Naslovi u popisima poveznica (servisi, vodiči): `moonlight`, podcrtano
+  u `halo`, hover `halo`.
+- Vanjske poveznice (nova kartica): mala nacrtana ikona "izlaz" (SVG maska, boja teksta) iza naziva
+  i tekst za čitače ekrana "(otvara se u novoj kartici)".
 
 ### Navigation
 - Stavke: O grupi, Što radimo, Uključi se, Servisi, Baza znanja, Kontakt. U mirovanju `lavender`, hover `moonlight`.
-- Preklopnik jezika "HR / EN": aktivni jezik u `starglow`.
+  Na stranicama vodiča "Baza znanja" je označena kao trenutna (`aria-current`, `moonlight`, podcrtano).
+- Preklopnik jezika "HR / EN": aktivni jezik `moonlight`, podcrtan.
+- Izbornik na mobitelu: poveznice u `menu` stilu, `moonlight`, hover `halo`.
 
 ### Placeholder
 - Vidljiv, isprekidan, s oznakom PH-xx iz `SADRZAJ.md`. Ne smije izgledati kao gotov sadržaj.
@@ -225,8 +267,10 @@ Jedini "veliki" pokret na stranici.
   `min(40vmin, 380px, 78 % visine tog reda)`, pa nikad ne dolazi pod naslov, ni na niskim ekranima.
 - **Disanje:** zvijezda se sporo širi i skuplja (`scale 1→1.025`), 8 s, `ease-in-out`, beskonačno.
 - **Prolaz vezan uz skrolanje:** dok posjetitelj skrola kroz pozornicu, planet prelazi slijeva nadesno
-  (raspon `min(110vmin, 1100px)`, tako da je planet na mobitelu i na početku vidljiv). Kad je planet ispred zvijezde, njezin sjaj padne najviše 12 %, a korona
-  oslabi. Izračun ide kroz `requestAnimationFrame`, a skrolanje sluša pasivni listener.
+  od 20 % do 80 % raspona `min(110vmin, 1100px)`. Kad je planet ispred zvijezde, njezin sjaj padne
+  najviše 20 %, a korona oslabi. Kad pozornica izlazi s ekrana, zvijezda i korona izblijede, da ne
+  prođu ispod navigacije. Izračun ide kroz `requestAnimationFrame` uz pasivni listener; kad uvod nije
+  na ekranu, "disanje" se pauzira.
 - **Smanjeno kretanje (`prefers-reduced-motion: reduce`):** nema animacija ni zakvačene pozornice.
   Planet stoji statično pokraj zvijezde.
 
@@ -244,7 +288,7 @@ Jedini "veliki" pokret na stranici.
 ### Do:
 - Drži zvijezdu kao jedini svjetli element na ekranu.
 - Ostavi puno tamnog prostora; tekst u jednom stupcu.
-- Uvijek pokaži vidljiv fokus (`halo`, 2px, odmak 3px).
+- Uvijek pokaži vidljiv fokus (`halo`, 2px, odmak 3px, `rounded.focus`).
 - Placeholdere drži vidljivima dok grupa ne pošalje sadržaj.
 
 ### Don't:

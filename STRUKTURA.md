@@ -35,7 +35,7 @@ Vodiči u Bazi znanja nemaju animirani uvod.
 | `/assets/js/site.js` | Izbornik na mobitelu, tranzit u uvodu |
 | `/assets/logo.jpg`, `/assets/favicon.png` | Postojeći (privremeni logo) |
 | `/assets/fonts/` | Newsreader i Source Sans 3, woff2, lokalno |
-| `/assets/og.png` | Slika za dijeljenje poveznice |
+| `/assets/og.jpg` | Slika za dijeljenje poveznice (JPEG, ~50 KB) |
 | `/404.html` | Stranica za nepostojeće adrese |
 | `/_config.yml` | Isključuje interne datoteke (PRODUCT.md, DESIGN.md, SADRZAJ.md, STRUKTURA.md) iz objave |
 
@@ -136,5 +136,5 @@ Okvirni sadržaj nacrta (opće znanje, za provjeru):
 - EN tekstovi: prijevod Claudea, za provjeru.
 - **Odlučeno (2026-11-22):**
   - fontovi se poslužuju lokalno iz `/assets/fonts/` (woff2, latin + latin-ext), bez zahtjeva prema Googleu;
-  - OG slika za dijeljenje `/assets/og.png` (1200×630, izrađena s canvas-design);
-  - stranica `/404.html` u istom stilu, s poveznicom na početnu (HR i EN tekst na istoj stranici, jer GitHub Pages ima jednu 404).
+  - OG slika za dijeljenje `/assets/og.jpg` (1200×630, izrađena s canvas-design);
+  - stranica `/404.html` u istom stilu, sa zaglavljem i podnožjem stranice te poveznicama na HR i EN početnu (jedna 404 za oba jezika, jer GitHub Pages ima jednu).

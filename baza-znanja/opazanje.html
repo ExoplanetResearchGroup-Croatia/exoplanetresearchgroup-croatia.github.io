@@ -15,7 +15,8 @@
 <meta property="og:title" content="Vodič za opažanje | Exoplanet Research Group Croatia">
 <meta property="og:description" content="Kako odabrati metu, pripremiti opremu i snimiti tranzit.">
 <meta property="og:url" content="https://exoplanetresearchgroup-croatia.github.io/baza-znanja/opazanje.html">
-<meta property="og:image" content="https://exoplanetresearchgroup-croatia.github.io/assets/og.png">
+<meta property="og:image" content="https://exoplanetresearchgroup-croatia.github.io/assets/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Topla zvijezda na tamnom nebu i natpis Exoplanet Research Group Croatia">
@@ -39,11 +40,11 @@
       <li><a href="../#sto-radimo">Što radimo</a></li>
       <li><a href="../#ukljuci-se">Uključi se</a></li>
       <li><a href="../#servisi">Servisi</a></li>
-      <li><a href="../#baza-znanja">Baza znanja</a></li>
+      <li><a href="../#baza-znanja" aria-current="true">Baza znanja</a></li>
       <li><a href="../#kontakt">Kontakt</a></li>
     </ul>
   </nav>
-  <div class="lang" role="group" aria-label="Jezik"><a href="opazanje.html" lang="hr" aria-label="Hrvatski" aria-current="page">HR</a><span aria-hidden="true">/</span><a href="../en/knowledge-base/observing.html" lang="en" hreflang="en" aria-label="English">EN</a></div>
+  <div class="lang" role="group" aria-label="Jezik"><a href="opazanje.html" lang="hr" aria-label="HR, Hrvatski" aria-current="page">HR</a><span aria-hidden="true">/</span><a href="../en/knowledge-base/observing.html" lang="en" hreflang="en" aria-label="EN, English">EN</a></div>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-label-open="Izbornik" data-label-close="Zatvori">Izbornik</button>
 </header>
 <main id="sadrzaj" class="article">
@@ -58,7 +59,7 @@
       <li>Cijeli tranzit, uz barem 30 do 60 minuta prije početka i nakon kraja, mora pasti u noć dok je meta dovoljno visoko iznad obzora, otprilike iznad 30°.</li>
       <li>Zvijezda mora biti dovoljno sjajna za dobar omjer signala i šuma, ali ne toliko da zasiti kameru.</li>
       <li>U vidnom polju trebaju biti usporedne zvijezde sličnog sjaja i boje.</li>
-      <li>Predviđanja tranzita nude Exoplanet Transit Database i ExoClock.</li>
+      <li>Predviđanja tranzita nude <a href="https://var.astro.cz/en/Exoplanets" target="_blank" rel="noopener">Exoplanet Transit Database<span class="visually-hidden"> (otvara se u novoj kartici)</span></a> i <a href="https://www.exoclock.space/" target="_blank" rel="noopener">ExoClock<span class="visually-hidden"> (otvara se u novoj kartici)</span></a>.</li>
     </ul>
     <p class="ph ph-block">PH-14: softver i način na koji grupa planira opažanja (odabir mete i termina)</p>
 
@@ -72,19 +73,22 @@
       <li>Postavite metu i usporedne zvijezde u vidno polje i držite ih na istom mjestu cijelu noć.</li>
       <li>Odaberite ekspoziciju pri kojoj ni meta ni usporedne zvijezde nisu zasićene. Mnogi opažači lagano defokusiraju sliku kako bi se svjetlost raspodijelila na više piksela.</li>
       <li>Snimajte bez prekida od barem 30 do 60 minuta prije početka tranzita do jednako toliko nakon kraja. Bez tog dijela prije i poslije teško je odrediti dubinu i trenutke tranzita.</li>
-      <li>Snimite kalibracijske snimke: bias, dark i flat.</li>
+      <li>Snimite kalibracijske snimke:
+        <ul>
+          <li><strong>bias</strong>: najkraća moguća ekspozicija bez svjetla; bilježi šum elektronike kamere,</li>
+          <li><strong>dark</strong>: ekspozicija iste duljine i pri istoj temperaturi kao snimke mete, ali bez svjetla; bilježi toplinski signal kamere,</li>
+          <li><strong>flat</strong>: snimka jednoliko osvijetljene plohe, primjerice sumračnog neba ili svjetlosne ploče; bilježi razlike u osjetljivosti piksela i prašinu na optici.</li>
+        </ul>
+      </li>
     </ol>
 
     <h2>Nakon noći</h2>
     <p>Zapišite uvjete opažanja: oblake, Mjesec, vjetar i prekide. Zatim nastavite s <a href="obrada-podataka.html">obradom podataka</a>.</p>
 
-    <aside class="more" aria-labelledby="more-h">
-      <h2 id="more-h">Ostali vodiči</h2>
-      <ul>
-        <li><a href="osnove.html">Osnove egzoplaneta</a></li>
-        <li><a href="obrada-podataka.html">Obrada podataka</a></li>
-      </ul>
-    </aside>
+    <nav class="more" aria-label="Vodiči">
+      <p class="prev"><span>Prethodni vodič</span> <a href="osnove.html">Osnove egzoplaneta</a></p>
+      <p class="next"><span>Sljedeći vodič</span> <a href="obrada-podataka.html">Obrada podataka</a></p>
+    </nav>
   </article>
 </main>
 <footer class="site-footer">&copy; <span data-year>2026</span> Exoplanet Research Group Croatia</footer>
