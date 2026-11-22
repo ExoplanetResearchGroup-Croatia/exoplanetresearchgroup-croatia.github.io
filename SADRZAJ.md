@@ -1,4 +1,4 @@
-# Sadržaj za web stranicu: Exoplanet Research Group Croatia
+# Sadržaj za web stranicu: ERG Croatia (Exoplanet Research Group Croatia)
 
 Ovaj dokument skuplja sve što još nedostaje na stranici. Upute za popunjavanje:
 
@@ -32,16 +32,54 @@ Ovaj dokument skuplja sve što još nedostaje na stranici. Upute za popunjavanje
 
 ---
 
-## 2. Članovi
+## 2. Astronomska društva i članovi
 
-**PH-05: Popis članova**
-Za svakog člana: ime i prezime, uloga u grupi, a po želji i ustanova te poveznica (web, ORCID, profil).
+**PH-05: Astronomska društva u grupi i njihovi članovi**
+Prvo upišite astronomsko društvo (naziv, grad, po želji poveznica), a ispod njega članove tog društva koji
+sudjeluju u grupi (ime i prezime, uloga u grupi, po želji poveznica: web, ORCID, profil).
+Po potrebi dodajte društva i retke.
 
-| Ime i prezime | Uloga u grupi | Ustanova (po želji) | Poveznica (po želji) |
-|---|---|---|---|
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
+### Društvo 1
+
+| Naziv društva | Grad | Poveznica (po želji) |
+|---|---|---|
+|   |   |   |
+
+Članovi društva 1:
+
+| Ime i prezime | Uloga u grupi | Poveznica (po želji) |
+|---|---|---|
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
+### Društvo 2
+
+| Naziv društva | Grad | Poveznica (po želji) |
+|---|---|---|
+|   |   |   |
+
+Članovi društva 2:
+
+| Ime i prezime | Uloga u grupi | Poveznica (po želji) |
+|---|---|---|
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
+### Društvo 3
+
+| Naziv društva | Grad | Poveznica (po želji) |
+|---|---|---|
+|   |   |   |
+
+Članovi društva 3:
+
+| Ime i prezime | Uloga u grupi | Poveznica (po želji) |
+|---|---|---|
+|   |   |   |
+|   |   |   |
+|   |   |   |
 
 ---
 

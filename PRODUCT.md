@@ -52,7 +52,7 @@ ExoClock, NASA Exoplanet Archive. Grupa ima i vlastite alate, ali koji su to, jo
 ## Capabilities and Constraints
 
 Potvrđene sekcije:
-1. O grupi i članovima
+1. O grupi i članovima (članovi su organizirani po astronomskim društvima: društvo, a ispod njega njegovi članovi)
 2. Što radimo
 3. Kako se uključiti
 4. Servisi / korisne poveznice (ETD, ExoClock, NASA Exoplanet Archive, vlastiti alati grupe)
@@ -71,22 +71,24 @@ Tekstovi:
 - Sav ostali sadržaj o grupi dolazi od grupe. Do tada stoji jasno označen placeholder.
 - Popis svih placeholdera: `SADRZAJ.md` (izvor) i `.docx` verzija za slanje na popunjavanje.
 
-Otvoreno: tekst o grupi, popis članova, kontakt e-mail, vlastiti alati grupe, pravi logo, custom domena.
+Otvoreno: tekst o grupi, popis društava i njihovih članova, kontakt e-mail, vlastiti alati grupe, custom domena.
 
 ## Brand Commitments
 
-- Ime: **Exoplanet Research Group Croatia** (naslov, `<title>`, footer). GitHub organizacija
+- Naziv: **ERG Croatia** (od 2026-11-22; zaglavlje, h1, `<title>`, podnožje, OG slika). Puni naziv
+  **Exoplanet Research Group Croatia** stoji ispod h1 i u opisu stranice. GitHub organizacija
   `ExoplanetResearchGroup-Croatia` (ranije ETD-Croatia).
-- `assets/logo.jpg` (tekst "ETD Rijeka") je **privremeni** logo. Ništa se ne preimenuje prema tekstu
-  loga. Kad stigne pravi logo, mijenjaju se samo datoteke u `assets/`.
+- Logo (2026-11-22): planet s prstenom i natpis "ERG Croatia", svijetloplavo (#ADD0EC) na plavom
+  (#132B76). Puni logo: `assets/logo.jpg`; znak bez natpisa za zaglavlje: `assets/logo-mark.png`;
+  favicon iz istog znaka.
 - Vizualno ograničenje koje je zadao korisnik: moderna, glatka, tamna stranica s animacijama.
   Ostatak vizualnog smjera dolazi u DESIGN.md.
 
 ## Evidence on Hand
 
-- `assets/logo.jpg` (privremeni logo), `assets/favicon.png`.
+- `assets/logo.jpg` (logo ERG Croatia), `assets/logo-mark.png`, `assets/favicon.png`.
 - Poveznica na Exoplanet Transit Database sa sadašnje stranice.
-- Nema: teksta o grupi, popisa članova, fotografija, kontakt e-maila, rezultata ni publikacija.
+- Nema: teksta o grupi, popisa društava i članova, fotografija, kontakt e-maila, rezultata ni publikacija.
   Ne izmišljati članove, broj opažanja, publikacije, suradnje, lokacije, opremu ni citate.
 
 ## Product Principles

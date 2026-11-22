@@ -58,7 +58,7 @@ DESKTOP (>= 860px)                                  MOBITEL (< 860px)
 +--------------------------------------------------+  |  (Kako se uključiti)   |
 |              O grupi i članovima                 |  +------------------------+
 |   [PH-02 opis] [PH-03 povijest] [PH-04 cilj]     |  | sekcije jedna ispod    |
-|   Članovi: ime / uloga / ustanova / poveznica    |  | druge, isti redoslijed |
+|   Društva, ispod svakog njegovi članovi          |  | druge, isti redoslijed |
 |              Što radimo                          |  |                        |
 |   | Opažanja tranzita      [PH-06]               |  |                        |
 |   | Analiza i modeliranje  [PH-07]               |  |                        |
@@ -81,9 +81,9 @@ Sve sekcije su u jednom centriranom stupcu (68ch), bez kartica.
 
 | # | Sekcija (sidro) | Sadržaj |
 |---|---|---|
-| 0 | Navigacija | Logo (vodi na početnu), O grupi, Što radimo, Uključi se, Servisi, Baza znanja, Kontakt, HR / EN |
-| 1 | Uvod | h1 ime grupe, PH-01, gumbi "Što radimo" (#sto-radimo) i "Kako se uključiti" (#ukljuci-se), tranzit |
-| 2 | O grupi i članovima (#o-grupi) | PH-02 opis, PH-03 povijest, PH-04 cilj; popis članova PH-05 |
+| 0 | Navigacija | Znak loga + "ERG Croatia" (vodi na početnu), O grupi, Što radimo, Uključi se, Servisi, Baza znanja, Kontakt, HR / EN |
+| 1 | Uvod | h1 "ERG Croatia", ispod puni naziv, PH-01, gumbi "Što radimo" (#sto-radimo) i "Kako se uključiti" (#ukljuci-se), tranzit |
+| 2 | O grupi i članovima (#o-grupi) | PH-02 opis, PH-03 povijest, PH-04 cilj; astronomska društva i, ispod svakog, njegovi članovi (PH-05) |
 | 3 | Što radimo (#sto-radimo) | Tri djelatnosti: PH-06, PH-07, PH-08 |
 | 4 | Kako se uključiti (#ukljuci-se) | PH-09 tko, PH-10 što treba, PH-11 prvi korak; poveznica "Javi se" na #kontakt |
 | 5 | Servisi i korisne poveznice (#servisi) | ETD, ExoClock, NASA Exoplanet Archive (naziv, opis u jednoj rečenici, poveznica); vlastiti alati PH-12 |
@@ -116,7 +116,7 @@ Okvirni sadržaj nacrta (opće znanje, za provjeru):
 
 - **Placeholderi:** vidljivi, isprekidani, s oznakom PH-xx dok grupa ne pošalje sadržaj.
 - **Neobavezna polja** (PH-17, poveznice članova): ako ostanu prazna, element se ne prikazuje.
-- **Članovi:** 1 do 20 redaka, duga imena i ustanove se prelamaju.
+- **Društva i članovi:** 1 do 10 društava, ispod svakog 1 do 20 članova; duga imena se prelamaju.
 - **Vlastiti alati:** 0 do 5; ako ih nema, podsekcija "Naši alati" se ne prikazuje.
 - **Bez JavaScripta:** sve poveznice rade, uvod je statičan, a na mobitelu su poveznice izbornika prikazane kao obična lista.
 - **Smanjeno kretanje:** bez animacija i bez zakvačenog uvoda (DESIGN.md).

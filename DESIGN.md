@@ -1,5 +1,5 @@
 ---
-name: Exoplanet Research Group Croatia
+name: ERG Croatia
 description: "Duboko nebo: tamna, mirna stranica s jednom toplom zvijezdom i tranzitom planeta"
 colors:
   ink: "#0C0A18"
@@ -127,7 +127,7 @@ components:
     padding: "8px 16px"
 ---
 
-# Design System: Exoplanet Research Group Croatia
+# Design System: ERG Croatia (Exoplanet Research Group Croatia)
 
 Ovaj dokument je jedini izvor istine za boje, tipografiju, razmake i pokret. CSS implementira ove
 tokene kao custom properties i ne uvodi nove vrijednosti. Ako nešto nedostaje, prvo se dopuni ovdje.
@@ -189,6 +189,7 @@ starijim preglednicima: `glass` (deep 85 %), `glass-edge` (lavender 15 %), `ghos
 | Uloga | Font | Veličina | Težina | Prored |
 |---|---|---|---|---|
 | Display (h1 početne) | Newsreader, opsz 72 | clamp(2.6rem, 6.4vw, 5.6rem) | 300 | 1.02 |
+| Puni naziv ispod h1 | Newsreader, `lavender` | 1.45rem | 400 | 1.25 |
 | Title (h1 vodiča) | Newsreader | clamp(2.4rem, 5vw, 3.8rem) | 400 | 1.08 |
 | h2 (sekcije početne) | Newsreader | clamp(2rem, 4vw, 3rem) | 400 | 1.1 |
 | h2 u vodiču | Newsreader | 1.75rem | 500 | 1.2 |
@@ -234,6 +235,7 @@ Nema sjena ispod blokova i nema gradijentnih pozadina sekcija.
 - Zvijezda i planet: krugovi. Planet je `ink` s tankim rubom `starglow` na 25 %.
 - Placeholderi imaju isprekidan rub (`1px dashed lavender`) i uvijek nose oznaku, npr. "PH-01: …".
   Kratki (jedan redak) su `rounded.pill`, a blok-placeholderi za odlomke i popise `rounded.panel`.
+  Placeholder strukture (PH-05) pokazuje razine: društvo, a uvučeno ispod njega članovi.
 
 ## Components
 
@@ -248,6 +250,11 @@ Nema sjena ispod blokova i nema gradijentnih pozadina sekcija.
   u `halo`, hover `halo`.
 - Vanjske poveznice (nova kartica): mala nacrtana ikona "izlaz" (SVG maska, boja teksta) iza naziva
   i tekst za čitače ekrana "(otvara se u novoj kartici)".
+
+### Logo
+- U zaglavlju: znak iz loga (planet s prstenom, bez natpisa) na plavoj podlozi loga, krug 32px
+  (`assets/logo-mark.png`, 96px za oštrinu). Uz znak tekst "ERG Croatia".
+- Boje loga (#132B76, #ADD0EC) pripadaju samo logu i ne koriste se u sučelju.
 
 ### Navigation
 - Stavke: O grupi, Što radimo, Uključi se, Servisi, Baza znanja, Kontakt. U mirovanju `lavender`, hover `moonlight`.

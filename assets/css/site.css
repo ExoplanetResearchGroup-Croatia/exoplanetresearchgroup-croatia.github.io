@@ -232,6 +232,10 @@ a[target="_blank"]::after {
   border-radius: var(--r-pill); padding: 6px var(--space-md); font-size: var(--fs-small); line-height: 1.5;
 }
 .ph-block { display: block; border-radius: var(--r-panel); padding: var(--space-md) var(--space-lg); }
+/* structure placeholder: societies, each followed by its members */
+.ph-tree ul { list-style: none; margin: var(--space-sm) 0 0; padding: 0; }
+.ph-tree ul ul { margin: var(--space-xs) 0 var(--space-sm) var(--space-lg); }
+.ph-tree li { color: var(--lavender); }
 
 /* ---------- Home: transit hero ---------- */
 .stage { position: relative; }
@@ -284,6 +288,7 @@ a[target="_blank"]::after {
   max-width: 10em; margin-inline: auto;
   font-weight: 300; font-size: var(--fs-display); line-height: 1.02; letter-spacing: -.02em;
 }
+.hero-full { margin-top: var(--space-sm); font: 400 var(--fs-h3)/1.25 var(--serif); color: var(--lavender); }
 .hero-copy .ph { margin-top: var(--space-lg); background: var(--ph-fill); }
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-md); margin-top: var(--space-xl); }
 
