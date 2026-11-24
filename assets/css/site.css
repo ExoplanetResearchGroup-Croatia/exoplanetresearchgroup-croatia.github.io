@@ -70,6 +70,7 @@
   --fs-article-h2: 1.75rem;
   --fs-h3: 1.45rem;
   --fs-body: 1.125rem;
+  --fs-lede: 1.25rem;
   --fs-small: .9rem;
   --fs-button: 1rem;
   --fs-nav: .95rem;
@@ -232,10 +233,6 @@ a[target="_blank"]::after {
   border-radius: var(--r-pill); padding: 6px var(--space-md); font-size: var(--fs-small); line-height: 1.5;
 }
 .ph-block { display: block; border-radius: var(--r-panel); padding: var(--space-md) var(--space-lg); }
-/* structure placeholder: societies, each followed by its members */
-.ph-tree ul { list-style: none; margin: var(--space-sm) 0 0; padding: 0; }
-.ph-tree ul ul { margin: var(--space-xs) 0 var(--space-sm) var(--space-lg); }
-.ph-tree li { color: var(--lavender); }
 
 /* ---------- Home: transit hero ---------- */
 .stage { position: relative; }
@@ -289,7 +286,7 @@ a[target="_blank"]::after {
   font-weight: 300; font-size: var(--fs-display); line-height: 1.02; letter-spacing: -.02em;
 }
 .hero-full { margin-top: var(--space-sm); font: 400 var(--fs-h3)/1.25 var(--serif); color: var(--lavender); }
-.hero-copy .ph { margin-top: var(--space-lg); background: var(--ph-fill); }
+.hero-lede { max-width: 34ch; margin: var(--space-lg) auto 0; font-size: var(--fs-lede); line-height: 1.5; color: var(--moonlight-soft); }
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-md); margin-top: var(--space-xl); }
 
 /* ---------- Home: sections ---------- */
@@ -316,6 +313,21 @@ a[target="_blank"]::after {
 .link-list a:hover { color: var(--halo); }
 .link-list p { color: var(--moonlight-soft); margin-top: var(--space-xs); }
 .section .after { margin-top: var(--space-xl); }
+
+/* astronomical societies, each followed by its members */
+.societies { list-style: none; }
+.societies > li { padding: var(--space-lg) 0; border-top: 1px solid var(--line); }
+.societies > li:last-child { border-bottom: 1px solid var(--line); }
+.society { font: 500 var(--fs-h3)/1.25 var(--serif); color: var(--moonlight); text-wrap: balance; }
+.society a { color: var(--moonlight); text-decoration-color: var(--halo); }
+.society a:hover { color: var(--halo); }
+.society > span { margin-left: var(--space-sm); font: 400 var(--fs-small)/1.5 var(--sans); color: var(--lavender); }
+.members { list-style: none; margin-top: var(--space-sm); }
+.members li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 var(--space-md); padding: var(--space-xs) 0; }
+.members .name, .members .name a { color: var(--moonlight-soft); }
+.members .name a { text-decoration-color: var(--halo); }
+.members .name a:hover { color: var(--halo); }
+.members .role { color: var(--lavender); font-size: var(--fs-small); }
 
 .contact dt { color: var(--lavender); font-size: var(--fs-small); }
 .contact dd { margin: var(--space-xs) 0 var(--space-lg); }

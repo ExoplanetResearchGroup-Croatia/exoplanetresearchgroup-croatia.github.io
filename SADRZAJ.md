@@ -1,5 +1,9 @@
 # Sadržaj za web stranicu: ERG Croatia (Exoplanet Research Group Croatia)
 
+> **Stanje 2026-11-24:** grupa je vratila popunjen dokument i tekstovi su na stranici (ton prilagođen,
+> pravopis ispravljen, engleski prijevod napravljen). Nedostaje još samo **PH-13** (oprema). PH-14 i PH-15
+> popunjeni su iz odgovora PH-07 i PH-12.
+
 Ovaj dokument skuplja sve što još nedostaje na stranici. Upute za popunjavanje:
 
 - Pišite na **hrvatskom**. Englesku verziju pripremamo mi i šaljemo je vama na provjeru.

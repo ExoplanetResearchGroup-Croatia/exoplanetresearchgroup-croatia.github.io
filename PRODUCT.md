@@ -71,7 +71,8 @@ Tekstovi:
 - Sav ostali sadržaj o grupi dolazi od grupe. Do tada stoji jasno označen placeholder.
 - Popis svih placeholdera: `SADRZAJ.md` (izvor) i `.docx` verzija za slanje na popunjavanje.
 
-Otvoreno: tekst o grupi, popis društava i njihovih članova, kontakt e-mail, vlastiti alati grupe, custom domena.
+Tekstovi grupe stigli su 2026-11-24 (ton prilagođen znanstvenoj skupini, pravopis ispravljen, EN prijevod Claudea).
+Otvoreno: oprema koju grupa koristi (PH-13), custom domena.
 
 ## Brand Commitments
 
@@ -88,7 +89,8 @@ Otvoreno: tekst o grupi, popis društava i njihovih članova, kontakt e-mail, vl
 
 - `assets/logo.jpg` (logo ERG Croatia), `assets/logo-mark.png`, `assets/favicon.png`.
 - Poveznica na Exoplanet Transit Database sa sadašnje stranice.
-- Nema: teksta o grupi, popisa društava i članova, fotografija, kontakt e-maila, rezultata ni publikacija.
+- Tekstovi grupe, društva i članovi, e-mail ergcroatia@gmail.com, Facebook i Instagram (2026-11-24).
+- Nema: fotografija, rezultata ni publikacija.
   Ne izmišljati članove, broj opažanja, publikacije, suradnje, lokacije, opremu ni citate.
 
 ## Product Principles

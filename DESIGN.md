@@ -190,6 +190,7 @@ starijim preglednicima: `glass` (deep 85 %), `glass-edge` (lavender 15 %), `ghos
 |---|---|---|---|---|
 | Display (h1 početne) | Newsreader, opsz 72 | clamp(2.6rem, 6.4vw, 5.6rem) | 300 | 1.02 |
 | Puni naziv ispod h1 | Newsreader, `lavender` | 1.45rem | 400 | 1.25 |
+| Uvodna rečenica (lede) | Source Sans 3, `moonlight-soft`, najviše 34ch | 1.25rem | 400 | 1.5 |
 | Title (h1 vodiča) | Newsreader | clamp(2.4rem, 5vw, 3.8rem) | 400 | 1.08 |
 | h2 (sekcije početne) | Newsreader | clamp(2rem, 4vw, 3rem) | 400 | 1.1 |
 | h2 u vodiču | Newsreader | 1.75rem | 500 | 1.2 |
@@ -261,6 +262,11 @@ Nema sjena ispod blokova i nema gradijentnih pozadina sekcija.
   Na stranicama vodiča "Baza znanja" je označena kao trenutna (`aria-current`, `moonlight`, podcrtano).
 - Preklopnik jezika "HR / EN": aktivni jezik `moonlight`, podcrtan.
 - Izbornik na mobitelu: poveznice u `menu` stilu, `moonlight`, hover `halo`.
+
+### Društva i članovi
+- Popis bez kartica, stavke odvojene tankim linijama (`line`). Društvo: Newsreader 500, 1.45rem, `moonlight`,
+  uz njega grad u `lavender` (sitno). Ispod društva članovi: ime u `moonlight-soft`, uloga desno u `lavender` (sitno).
+- Vanjske poveznice (web društva, osobne stranice) imaju ikonu vanjske poveznice.
 
 ### Placeholder
 - Vidljiv, isprekidan, s oznakom PH-xx iz `SADRZAJ.md`. Ne smije izgledati kao gotov sadržaj.
