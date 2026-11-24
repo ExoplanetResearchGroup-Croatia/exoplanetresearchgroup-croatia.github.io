@@ -323,6 +323,7 @@ a[target="_blank"]::after {
 .society a:hover { color: var(--halo); }
 .society > span { margin-left: var(--space-sm); font: 400 var(--fs-small)/1.5 var(--sans); color: var(--lavender); }
 .members { list-style: none; margin-top: var(--space-sm); }
+.members:first-child { margin-top: 0; }
 .members li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 var(--space-md); padding: var(--space-xs) 0; }
 .members .name, .members .name a { color: var(--moonlight-soft); }
 .members .name a { text-decoration-color: var(--halo); }
